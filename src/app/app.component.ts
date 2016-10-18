@@ -13,7 +13,7 @@ export class AppComponent {
         rootService.test = '123';
         console.log(rootService); //123
         setTimeout(() => {
-            console.log(rootService);//321 caused by AComponent from AModule
+            console.log(rootService);//321 caused by AComponent in AModule
         }, 200);
     }
 }
