@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { AModule } from './a/a.module';
-import { RootService } from './shared/root.service';
+import { ExampleModule } from './example/example.module';
+import { ModuleTestRoutingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [
@@ -15,9 +15,10 @@ import { RootService } from './shared/root.service';
         BrowserModule,
         FormsModule,
         HttpModule,
-        AModule
+        ExampleModule,
+        ModuleTestRoutingModule
     ],
-    providers: [RootService],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {
