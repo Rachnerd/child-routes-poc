@@ -16,7 +16,17 @@ export class ExampleComponent implements OnInit {
         this.exampleService.value$
             .subscribe(
                 () => this.router.navigate([''])
-            )
+            );
+        this.exampleService.error$
+            .filter(error => error === undefined)
+            .subscribe(
+                () => this.router.navigate([''])
+            );
+        this.exampleService.error$
+            .filter(error => error !== undefined)
+            .subscribe(
+                () => this.router.navigate(['', 'error'])
+            );
     }
 
 }

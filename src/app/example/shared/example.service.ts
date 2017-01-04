@@ -6,8 +6,8 @@ import { NotifyAnalytics, Analytics } from '../../analytics/analytics.model';
 export class ExampleService implements NotifyAnalytics {
     value$: Observable<string>;
     error$: Observable<string>;
-    private valueSubject: BehaviorSubject<string> = new BehaviorSubject<string>('Change me!');
-    private errorSubject: BehaviorSubject<string> = new BehaviorSubject<string>('Change me!');
+    private valueSubject: BehaviorSubject<string> = new BehaviorSubject<string>('Initial value');
+    private errorSubject: BehaviorSubject<string> = new BehaviorSubject<string>('Initial error');
 
     constructor() {
         this.value$ = this.valueSubject.asObservable();

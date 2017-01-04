@@ -15,7 +15,10 @@ export class ChangeComponent implements OnInit {
         this.value = this.exampleService.getValue();
     }
     change(value: string) {
-        // validate change and send errors to example service (for adobe)
-        this.exampleService.setValue(value);
+        if(value.length < 3) {
+            this.exampleService.setError('New entered value too short ' + value.length);
+        }else {
+            this.exampleService.setValue(value);
+        }
     }
 }

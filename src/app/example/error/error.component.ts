@@ -16,7 +16,7 @@ export class ErrorComponent implements OnInit {
         this.error = this.exampleService.getError();
     }
 
-    change(value: string) {
-        this.exampleService.setError(value);
+    clean() {
+        this.exampleService.setError(undefined);
     }
 }
