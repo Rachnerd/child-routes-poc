@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ExampleComponent implements OnInit {
 
-    constructor(public exampleService: ExampleService, private router: Router) {
+    constructor(private exampleService: ExampleService, private router: Router) {
     }
 
     ngOnInit() {
