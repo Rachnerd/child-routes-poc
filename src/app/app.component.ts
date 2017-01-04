@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AnalyticsService } from './analytics/analytics.service';
 
 @Component({
     selector: 'mt-root',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'app works!';
 
-    constructor() {
+    constructor(analyticsService: AnalyticsService) { // Here to activate the service
 
     }
 }

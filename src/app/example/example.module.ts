@@ -5,6 +5,7 @@ import { ShowComponent } from './show/show.component';
 import { RouterModule } from '@angular/router';
 import { ChangeComponent } from './change/change.component';
 import { ExampleService } from './shared/example.service';
+import { ErrorComponent } from './error/error.component';
 
 export const exampleRoutes = [
     {
@@ -18,6 +19,10 @@ export const exampleRoutes = [
             {
                 path: 'change',
                 component: ChangeComponent
+            },
+            {
+                path: 'error',
+                component: ErrorComponent
             }
         ]
     }
@@ -29,7 +34,7 @@ export const exampleRoutes = [
         RouterModule.forChild(exampleRoutes)
     ],
     providers: [ExampleService],
-    declarations: [ExampleComponent, ShowComponent, ChangeComponent]
+    declarations: [ExampleComponent, ShowComponent, ChangeComponent, ErrorComponent]
 })
 export class ExampleModule {
 }
