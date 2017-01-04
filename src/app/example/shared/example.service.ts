@@ -37,6 +37,6 @@ export class ExampleService implements NotifyAnalytics {
                 this.error$
                     .map(error => new Analytics('Value error', error))
             )
-            .skip(2); // Skipping both initial values of the behavior subjects
+            .skip(2); // Skips both initial values of the behavior subjects
     }
 }
